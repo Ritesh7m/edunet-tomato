@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f8f8f8;
+}
+
+/* Top Bar Section */
+.topBarSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 80px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: white;
+}
+
+.companyTitle h2 {
+    color: #E23744;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.topimg {
+    border: 2px solid #E23744;
+}
+
+/* Landing Section */
+.landingSection {
+    padding: 0 100px;
+    margin-top: 100px;
+}
+
+/* Item Section */
+.itemSection {
+    display: flex;
+    width: 100%;
+    margin-top: 120px;
+}
+
+.gallery {
+    width: 150px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+/* Chain Section */
+.chainSection {
+    display: flex;
+    overflow-x: hidden;
+    position: relative;
+    height: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.vendorBox {
+    border-radius: 10px;
+}
+a {
+    color: #E23744; 
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #2D2D2D;
+    text-decoration: underline;
+}
+
+
+.vendorBox img {
+    width: 350px;
+    height: 220px;
+    flex: 0 0 auto;
+    margin-right: 30px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.vendorBox img:hover {
+    transform: scale(1.05);
+}
+
+
+.firmSection {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.firmGroup {
+    position: relative;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+}
+
+.firmGroup:hover {
+    transform: translateY(-5px);
+}
+
+.firmGroup img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.firmOffer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), #E23744);
+    color: white;
+    text-transform: uppercase;
+}
+
+/* Product Section */
+.productSection {
+    display: flex;
+    flex-direction: column;
+    padding: 0 100px;
+    margin-top: 100px;
+}
+
+.productSection h3 {
+    text-align: center;
+    background-color: #E23744;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.productBox {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+    border-top: 2px solid lightgray;
+    position: relative;
+    background: white;
+    border-radius: 8px;
+}
+
+.productGroup img {
+    width: 100px;
+    border-radius: 5px;
+}
+
+.addButton {
+    border: 1px solid #E23744;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    color: #E23744;
+    font-weight: bold;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    max-width: 80px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.addButton:hover {
+    background: #E23744;
+    color: white;
+}
+
+/* Buttons */
+.filterButtons {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.filterButtons button {
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.activeButton {
+    background-color: #E23744;
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+}
+
+
+.zoomEffect {
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.zoomEffect:hover {
+    transform: scale(1.05);
+}
+
+
+.loaderSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 100px;
+}
+
+
+@media (max-width: 576px) {
+    .topBarSection {
+        padding: 0 20px;
+    }
+    .landingSection {
+        padding: 0 10px;
+    }
+    .itemSection {
+        margin-top: 80px;
+    }
+    .chainSection {
+        height: auto;
+        flex-direction: column;
+    }
+    .vendorBox img {
+        width: 100%;
+        height: 180px;
+        margin-bottom: 20px;
+    }
+    .firmSection {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+    .firmGroup img {
+        width: 100%;
+    }
+    .firmOffer {
+        font-size: 0.9rem;
+    }
+    .productSection {
+        padding: 0 20px;
+    }
+    .productBox {
+        flex-direction: column;
+        align-items: center;
+    }
+    .addButton {
+        width: 100%;
+        max-width: 100px;
+    }
+}
