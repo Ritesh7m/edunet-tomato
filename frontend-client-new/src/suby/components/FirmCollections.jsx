@@ -14,7 +14,7 @@ const FirmCollections = () => {
         const newFirmData = await response.json();
         setFirmData(newFirmData.vendors);
       } catch (error) {
-        console.error("Firm data not fetched", error);
+        console.error("Firm data not fetched please check again!", error);
       }
     };
     firmDataHandler();
